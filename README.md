@@ -5,6 +5,8 @@ ______
 
 This project uses the GitHub.io feature to create a portfolio. The portfolio is used as a personal website that links all my projects and different website for users to view my progress with coding. 
 
+Users will be able to view my GitHub, LinkedIn, Repl.it, Leetcodes, projects, and email me.
+
 The languages used in this project are:
 - CSS
 - HTML
