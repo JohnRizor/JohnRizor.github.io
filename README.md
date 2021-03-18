@@ -1,5 +1,5 @@
-# JohnRizor.GitHub.io
-## Portfolio
+<h1 align="center">JohnRizor.GitHub.io</h1>
+<h2 align="center">My Portfolio Website</h2>
 
 ______
 
