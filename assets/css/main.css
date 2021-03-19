@@ -83,7 +83,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #f0f4f4;
+		background: #2b252c;
 		color: #5b5b5b;
 		font-size: 15pt;
 		line-height: 1.85em;
@@ -127,13 +127,12 @@ input, select, textarea {
 
 	h2 {
 		font-size: 2.85em;
-		color: azure;
 		font-family: Georgia, 'Times New Roman', Times, serif;
 	}
 
 	h3 {
 		font-size: 1.25em;
-		color: #E5E5E5;
+		
 	}
 
 	h4 {
@@ -141,17 +140,10 @@ input, select, textarea {
 		margin: 0 0 0.25em 0;
 	}
 
-	strong, b{
-		font-weight: 900;
-		color:#E5E5E5
-		
+	strong, b {
+		font-weight: 400;
+		color: #483949;
 	}
-	strong, p{
-		font-weight: 900;
-		color:#E5E5E5
-		
-	}
-
 
 	em, i {
 		font-style: italic;
@@ -195,11 +187,17 @@ input, select, textarea {
 	}
 
 	p {
-		text-align: center;
-		padding-left: px;
-		padding-right: px;
+		text-align: justify;
+		
 		
 	}
+	
+	p.fade-in{
+		animation: fadeIn 5s;
+
+	}
+	
+
 
 	br.clear {
 		clear: both;
@@ -238,6 +236,60 @@ input, select, textarea {
 		color: rgba(128, 128, 128, 0.75);
 		font-size: 0.8em;
 	}
+
+	.fade-in{
+		animation: fadeIn 5s;
+
+	}
+	@keyframes fadeIn{
+		from{
+			opacity: 0;
+		}
+
+		to{
+			opacity: 1;
+		}
+
+	}
+	@keyframes fadeAndScale{
+		0%	{
+			opacity: 0;
+			transform: scale3d(.75,.75,1);
+		}
+		70%	{
+			opacity: 0;
+			transform: scale3d(.75,.75,1);
+		}
+		100% {
+			opacity: 1;
+			transform: scale3d(1,1,1);
+		}
+	}
+
+	.intro-par
+	{
+		animation: fadeAndScale 4s cubic-bezier(.39,-1.05,.58,1.95);
+		animation-delay: -0.2s;
+		transform-origin: center bottom;
+	}
+	.intro-par2
+	{
+		animation: fadeAndScale 2s cubic-bezier(.39,-1.05,.58,1.95);
+		animation-delay: -0.2s;
+		transform-origin: center bottom;
+		-moz-transition: opacity 0.75s ease-in-out;
+		-webkit-transition: opacity 0.75s ease-in-out;
+		-ms-transition: opacity 0.75s ease-in-out;
+		transition: opacity 0.75s ease-in-out;
+	}
+	.links
+	{
+		animation: fadeAndScale 5s cubic-bezier(.39,-1.05,.58,1.95);
+		
+		transform-origin: center bottom;
+	}
+
+		
 
 /* Container */
 
@@ -1788,6 +1840,9 @@ input, select, textarea {
 	footer {
 		margin: 2.5em 0 0 0;
 	}
+	.rotate{
+		color: #ddd;
+	}
 
 /* Image */
 
@@ -2176,15 +2231,14 @@ input, select, textarea {
 /* Wrapper */
 
 	.wrapper {
-		background-image: url(https://wallpapercave.com/wp/wp5727862.jpg);
-		margin: 0 0 0 0;
+		background: #fff;
+		margin: 0 0 2em 0;
 		padding: 6em 0 6em 0;
 	}
 
 		.wrapper.style2 {
 			padding-top: .50;
-			background: darkcyan;
-			text-align: center;
+			text-align: justify;
 			
 		}
 
@@ -2294,7 +2348,7 @@ input, select, textarea {
 		}
 
 	body.homepage.is-preload #header:after {
-		opacity: 0;
+		opacity: 1;
 	
 	}
 
@@ -2427,23 +2481,24 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		background:darkslategrey;
+		background:  #fff;
 		text-align: center;
-		padding: 4.5em 0 4.5em 0;
+		padding: 4.5em 0 4.5em ;
 		margin-bottom: 0;     
-		opacity: 1;
 		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-		color:azure;
+		
 		
 		
 	}
 
 		#banner header > p {
 			margin-bottom: 0;
-			color:azure;
+			color:#3B353C;
 		}
 		#banner p {
-			color:azure;
+			color:#3B353C;
+			margin-left: 10em;
+			margin-right: 10em;
 		}
 
 /* Content */
@@ -2484,13 +2539,13 @@ input, select, textarea {
 
 /* Footer */
 
-	#footer {
-		position: relative;
-		overflow: hidden;
-		padding: 6em 0 6em 0;
-		background:aliceblue;
-		color: #2B252C;
-	}
+#footer {
+	position: relative;
+	overflow: hidden;
+	padding: 6em 0 6em 0;
+	background: #2b252c;
+	color: #fff;
+}
 
 		#footer .icon.circled {
 			background: #fff;
@@ -2537,8 +2592,7 @@ input, select, textarea {
 		overflow: hidden;
 		padding: 2em 0 2em 0;
 		margin-bottom: 0;
-		background-image: url(https://wallpapercave.com/wp/wp5727862.jpg)
-		
+		background-image: url(https://wallpapercave.com/wp/wp5727862.jpg);
 	}
 
 		.carousel .forward, .carousel .backward {
@@ -2617,12 +2671,14 @@ input, select, textarea {
 			position: relative;
 			-webkit-overflow-scrolling: touch;
 			padding: 0 2em 0 2em;
-			color: #E5E5E5;
+			
+			
 		}
 
 		.carousel article {
 			display: inline-block;
 			width: 18em;
+			background-color: rgba;
 			text-align: center;
 			padding: 0 1em 3em 1em;
 			margin: 0 2em 0 0;
@@ -2632,7 +2688,7 @@ input, select, textarea {
 			-webkit-transition: opacity 0.75s ease-in-out;
 			-ms-transition: opacity 0.75s ease-in-out;
 			transition: opacity 0.75s ease-in-out;
-			color: #E5E5E5;
+			color: #E5E5E5
 		}
 
 			.carousel article.loading {
@@ -2650,8 +2706,7 @@ input, select, textarea {
 
 			.carousel article p {
 				text-align: center;
-				color: #E5E5E5;
-				
+			
 			}
 
 /* Wide */
@@ -2670,15 +2725,9 @@ input, select, textarea {
 			.carousel {
 				padding: 1.5em 0 1.5em 0;
 			}
-
-				.carousel .reel {
-					padding: 0 1.5em 0 1.5em;
-				}
-
 				.carousel article {
 					width: 18em;
 					margin: 0 1.25em 0 0;
-					color: #E5E5E5;
 				}
 
 	}
